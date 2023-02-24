@@ -1,0 +1,9 @@
+<!--Responsive image changes size depending on placement and device type in experience cloud -->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<!--Begin Layout -->
+    <lightning:layout>
+        <lightning:layoutItem>
+            <img src="{!$ContentAsset.portfolioMainImg}" alt="Woman Developer"/>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>
