@@ -3,7 +3,7 @@
 	<!--Begin Layout -->
     <lightning:layout>
         <lightning:layoutItem>
-            <img src="{!$ContentAsset.portfolioMainImg}" alt="Woman Developer"/>
+            <img src="{!$ContentAsset.portfolioMainImg2}" alt="Erin Agobert Salesforce Developer Logo"/>
         </lightning:layoutItem>
     </lightning:layout>
 </aura:component>

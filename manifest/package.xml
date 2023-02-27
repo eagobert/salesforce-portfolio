@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
      <types>
         <members>portfolioMainImg</members>
+        <members>portfolioMainImg2</members>
+        <members>PortfolioBackground2</members>
         <name>ContentAsset</name>
     </types>
     <types>
