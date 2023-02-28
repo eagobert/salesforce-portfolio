@@ -10,6 +10,10 @@
         <members>mainImage</members>
         <name>AuraDefinitionBundle</name>
     </types>
+    <types>
+        <members>Erin_Agobert1</members>
+        <name>ExperienceBundle</name>
+    </types>
 
     <version>56.0</version>
 </Package>
