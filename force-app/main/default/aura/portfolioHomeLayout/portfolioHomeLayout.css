@@ -1,11 +1,18 @@
-.THIS body{
-   /* background-image: url({!$ContentAsset.PortfolioBackground2}); */
+.THIS.backgroundRegion{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
+}
+.THIS .navigationRegion{
+    height: 50px;
 }
 
-.THIS #homePg {
+.THIS .mainContentRegion{
+   height: calc(100vh - 100px);
+}
 
+.THIS .footerRegion{
+    height: 50px;
 }

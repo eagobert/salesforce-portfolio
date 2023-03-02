@@ -4,17 +4,17 @@
     <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
     <aura:attribute name="backgroundUrl" type="string"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
-    <div id="homePg">
-        <div style="{!'background-image: url(' + v.backgroundUrl + ');'}">
-            <div class="navigation">
+    <div class="backgroundRegion" style="{!'background-image: url(' + v.backgroundUrl + ');'}">
+        <lightning:layout class="homePg" multipleRows="true">
+            <lightning:layoutItem class="navigationRegion" size="12">
                 {!v.navBar}
-            </div>
-            <div class="mainContentAreaRegion">
+            </lightning:layoutItem>
+            <lightning:layoutItem class="mainContentRegion">
                 {!v.body}
-            </div>
-            <div class="footerRegion">
+            </lightning:layoutItem>
+            <lightning:layoutItem class="footerRegion" size="12">
                 {!v.footer}
-            </div>
-        </div>
+            </lightning:layoutItem>
+        </lightning:layout>
     </div>
 </aura:component>
