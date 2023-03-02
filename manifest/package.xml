@@ -7,6 +7,9 @@
         <name>ContentAsset</name>
     </types>
     <types>
+        <members>defaultTokens</members>
+        <members>portfolioHomeLayout</members>
+        <members>portfolioNavigation</members>
         <members>mainImage</members>
         <name>AuraDefinitionBundle</name>
     </types>

@@ -44,11 +44,11 @@
     "_TextColor1" : "rgb(31, 31, 31)",
     "_TextColor2" : "rgb(0, 0, 0)",
     "_TextColor3" : "rgb(0, 0, 0)",
-    "_brandNavigationBarBackgroundColor" : "rgba(128,128,128,.75)",
+    "_brandNavigationBarBackgroundColor" : "rgb(235, 127, 103)",
     "_brandNavigationItemBackgroundColorHover" : "rgba(0,0,0,.2)",
     "_brandNavigationItemDividerColor" : "rgba(255, 255, 255, 0.2)",
-    "brandNavigationBackgroundColor" : "rgb(128,128,128)",
-    "brandNavigationBarBackgroundColor" : "rgba(128,128,128,.75)",
+    "brandNavigationBackgroundColor" : "rgb(235, 127, 103)",
+    "brandNavigationBarBackgroundColor" : "rgb(235, 127, 103)",
     "brandNavigationColorText" : "#FFFFFF"
   }
 }

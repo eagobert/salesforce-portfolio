@@ -7,38 +7,9 @@
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "background" : "background: rgba(0,0,0,0)",
-        "backgroundOverlay" : "rgba(0,0,0,0.5)",
-        "contentAreaWidth" : 100,
-        "sectionConfig" : {
-          "UUID" : "8bec937d-8778-4d2a-918c-9f6cbcd52d00",
-          "columns" : [ {
-            "UUID" : "ee2750cc-9a9e-435b-b4e4-5712b1897214",
-            "columnKey" : "1",
-            "columnName" : "Column 1",
-            "columnWidth" : "12",
-            "seedComponents" : [ ]
-          } ]
-        },
-        "sectionHeight" : 121
-      },
-      "componentName" : "forceCommunity:section",
-      "id" : "8bec937d-8778-4d2a-918c-9f6cbcd52d00",
-      "regions" : [ {
-        "id" : "ee2750cc-9a9e-435b-b4e4-5712b1897214",
-        "regionLabel" : "Column 1",
-        "regionName" : "1",
-        "renditionMap" : { },
-        "type" : "region"
-      } ],
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
         "background" : "background: rgba(243,8,8,0)",
         "backgroundOverlay" : "rgba(0,0,0,0.5)",
-        "contentAreaWidth" : 90,
+        "contentAreaWidth" : 100,
         "sectionConfig" : {
           "UUID" : "3d5de0f5-4cc1-40a1-83f6-5e050ce3e385",
           "columns" : [ {
@@ -57,41 +28,12 @@
         "components" : [ {
           "componentAttributes" : { },
           "componentName" : "c:mainImage",
-          "id" : "67ccfee5-39ed-4b97-b7ca-f0b6120611e1",
+          "id" : "e4c92049-8236-4391-a0da-fbd516cc1272",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
         "id" : "5f4ad82c-db21-4ca9-b0e9-21d6933083b4",
-        "regionLabel" : "Column 1",
-        "regionName" : "1",
-        "renditionMap" : { },
-        "type" : "region"
-      } ],
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "background" : "background: rgba(0,0,0,0)",
-        "backgroundOverlay" : "rgba(0,0,0,0.5)",
-        "contentAreaWidth" : 100,
-        "sectionConfig" : {
-          "UUID" : "1da80275-5d1f-42ec-90fe-e62a0ad8d275",
-          "columns" : [ {
-            "UUID" : "bc7c9fa5-1399-43ab-9eb9-998290e585ca",
-            "columnKey" : "1",
-            "columnName" : "Column 1",
-            "columnWidth" : "12",
-            "seedComponents" : [ ]
-          } ]
-        },
-        "sectionHeight" : 95
-      },
-      "componentName" : "forceCommunity:section",
-      "id" : "1da80275-5d1f-42ec-90fe-e62a0ad8d275",
-      "regions" : [ {
-        "id" : "bc7c9fa5-1399-43ab-9eb9-998290e585ca",
         "regionLabel" : "Column 1",
         "regionName" : "1",
         "renditionMap" : { },
@@ -120,7 +62,7 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "Inner",
+  "themeLayoutType" : "nVCZzpjVPeIxYdq1kZCNP9GGWNb7Eq",
   "type" : "view",
   "viewType" : "home"
 }
