@@ -1,3 +1,7 @@
 .THIS a {
     color: #f2f2f2;
 }
+
+.THIS.navigationMenu{
+    height: 50px;
+}

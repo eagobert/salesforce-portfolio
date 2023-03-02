@@ -3,10 +3,11 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 .THIS .navigationRegion{
-    height: 50px;
+   	height: 50px;
+    background-color: #eb7f67;
 }
 
 .THIS .mainContentRegion{

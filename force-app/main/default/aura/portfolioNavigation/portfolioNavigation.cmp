@@ -1,12 +1,11 @@
 <aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="navigationLinkSetId" type="string" default="portfolioMenu"/>
     <aura:attribute name="menuItems" type="object"/>
-    <Lightning:layout verticalAlign="center" horizontalAlign="end">
+    <lightning:layout class="navigationMenu" verticalAlign="center" horizontalAlign="end">
         <aura:iteration items="{!v.menuItems}" var="item">
-            <lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
                 <a data-menu-item-id="{!item.id}" href="">{!item.label}</a>
             </lightning:layoutItem>
-            <a>{!ContentAsset.PortfolioBackground2}</a>
         </aura:iteration>
-    </Lightning:layout>
+</lightning:layout>
 </aura:component>

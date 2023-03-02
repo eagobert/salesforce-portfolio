@@ -7,9 +7,9 @@
     <div class="backgroundRegion" style="{!'background-image: url(' + v.backgroundUrl + ');'}">
         <lightning:layout class="homePg" multipleRows="true">
             <lightning:layoutItem class="navigationRegion" size="12">
-                {!v.navBar}
+                    <c:portfolioNavigation></c:portfolioNavigation>
             </lightning:layoutItem>
-            <lightning:layoutItem class="mainContentRegion">
+            <lightning:layoutItem class="mainContentRegion" size="12">
                 {!v.body}
             </lightning:layoutItem>
             <lightning:layoutItem class="footerRegion" size="12">
