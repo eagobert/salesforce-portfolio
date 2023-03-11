@@ -14,7 +14,7 @@
   },
   "nativeMobileNavConfig" : {
     "showBackButton" : true,
-    "showHamburgerMenuWithBackButton" : false
+    "showHamburgerMenuWithBackButton" : true
   },
   "nativeTabMenu" : {
     "branding" : {

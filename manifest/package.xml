@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
      <types>
+        <members>portfolioAboutImg1</members>
         <members>portfolioMainImg</members>
         <members>portfolioMainImg2</members>
         <members>PortfolioBackground2</members>
         <name>ContentAsset</name>
     </types>
     <types>
+        <members>portfolioFonts</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
         <members>defaultTokens</members>
+        <members>portfolioThemeTokens</members>
         <members>portfolioHomeLayout</members>
+        <members>portfolioAboutLayout</members>
         <members>portfolioNavigation</members>
         <members>mainImage</members>
         <name>AuraDefinitionBundle</name>

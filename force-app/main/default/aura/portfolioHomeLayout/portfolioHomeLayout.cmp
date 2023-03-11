@@ -7,10 +7,12 @@
     <div class="backgroundRegion" style="{!'background-image: url(' + v.backgroundUrl + ');'}">
         <lightning:layout class="homePg" multipleRows="true">
             <lightning:layoutItem class="navigationRegion" size="12">
-                    <c:portfolioNavigation></c:portfolioNavigation>
+                <c:portfolioNavigation></c:portfolioNavigation>
             </lightning:layoutItem>
             <lightning:layoutItem class="mainContentRegion" size="12">
-                {!v.body}
+                <lightning:layout class="mainImgContainer" verticalAlign="center" horizontalAlign="center">
+                    <c:mainImage></c:mainImage>
+                </lightning:layout>
             </lightning:layoutItem>
             <lightning:layoutItem class="footerRegion" size="12">
                 {!v.footer}

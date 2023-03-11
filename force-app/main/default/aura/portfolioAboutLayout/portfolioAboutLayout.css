@@ -1,0 +1,21 @@
+.THIS {
+    background-color: #191970;
+}
+
+.THIS .navigationRegion{
+   	height: 50px;   
+}
+
+.THIS .leftColumnRegion{
+   height: calc(100vh - 100px);
+}
+.THIS .aboutImgContainer{
+   height: calc(100vh - 100px);
+}
+.THIS .rightColumnRegion{
+   height: calc(100vh - 100px);
+}
+
+.THIS .footerRegion{
+    height: 50px;
+}

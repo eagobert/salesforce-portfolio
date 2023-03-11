@@ -1,7 +1,5 @@
-<!--Responsive image changes size depending on placement and device type in experience cloud -->
 <aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
-	<!--Begin Layout -->
-    <lightning:layout class="mainImgContainer" verticalAlign="center" horizontalAlign="center">
-            <img class="mainImg" src="{!$ContentAsset.portfolioMainImg2}" alt="Erin Agobert Salesforce Developer Logo"/>
-    </lightning:layout>
+    <lightning:layoutItem flexibility="auto" padding="horizontal-medium" size="11">
+        <img class="mainImg" src="{!$ContentAsset.portfolioMainImg3}" alt="Erin Agobert Salesforce Developer Logo"/>
+    </lightning:layoutItem>
 </aura:component>

@@ -1,2 +1,2 @@
-<aura:tokens>
+<aura:tokens extends="c:portfolioThemeTokens" access="global">
 </aura:tokens>

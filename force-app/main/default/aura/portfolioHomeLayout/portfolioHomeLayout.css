@@ -3,17 +3,17 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    /*height: 100vh;*/
 }
 .THIS .navigationRegion{
    	height: 50px;
-    background-color: #eb7f67;
 }
 
 .THIS .mainContentRegion{
    height: calc(100vh - 100px);
 }
-
+.THIS .mainImgContainer{
+   height: calc(100vh - 100px);
+}
 .THIS .footerRegion{
     height: 50px;
 }
