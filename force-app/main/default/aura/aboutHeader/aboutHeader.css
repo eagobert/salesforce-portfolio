@@ -1,0 +1,7 @@
+.THIS {
+    color: t(colorTextDefault);
+    font-family: t(fontFamilyHeading);
+    font-size: t(headerFontSize);
+    padding-top: 0.80rem;
+    padding-bottom: 0.85rem;
+}

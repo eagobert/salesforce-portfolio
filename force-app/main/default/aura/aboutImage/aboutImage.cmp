@@ -1,0 +1,5 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <lightning:layoutItem padding="around-large" size="8" alignmentBump="bottom">
+        <img class="mainImg" src="{!$ContentAsset.portfolioAboutMainImg1}" alt="Picture of Developer"/>
+    </lightning:layoutItem>
+</aura:component>

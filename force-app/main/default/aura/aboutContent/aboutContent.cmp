@@ -1,0 +1,9 @@
+<aura:component >
+	<lightning:layout>
+    <lightning:layoutItem size="11" largeDeviceSize="10">
+        <p>Cupcake ipsum dolor sit amet jelly-o soufflé croissant. Cheesecake sugar plum jelly-o sweet tootsie roll tart marzipan fruitcake macaroon. Muffin wafer pie tart croissant. Caramels donut jelly beans tootsie roll bonbon cake sesame snaps candy powder.</p>
+            <br></br>
+        <p>Caramels cupcake oat cake topping jelly-o marzipan lollipop chocolate bar. Cheesecake fruitcake bonbon cheesecake jelly beans toffee marzipan. Bonbon carrot cake halvah liquorice marzipan tootsie roll candy.</p>
+    </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

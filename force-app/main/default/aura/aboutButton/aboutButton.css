@@ -1,0 +1,8 @@
+.THIS {
+    padding-top: t(spacingXLarge);
+    font-size: t(fontSize4);
+}
+
+.THIS button{
+    padding: t(buttonPadding);
+}

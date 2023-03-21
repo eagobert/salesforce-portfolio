@@ -1,0 +1,7 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <lightning:layout>
+    	<lightning:layoutItem>
+        	<lightning:button variant="brand" label="CONTACT ME"/>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

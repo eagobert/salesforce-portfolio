@@ -1,3 +1,6 @@
 <aura:tokens extends="forceCommunity:base" access="global">
-	
+    <aura:token name="headerFontSize" value="3.125rem"/>
+    <aura:token name="contentFontSize" value="{!fontSize5}"/>
+    <aura:token name="contentLineHeight" value="1.75"/>
+    <aura:token name="buttonPadding" value="10px 40px"/>
 </aura:tokens>

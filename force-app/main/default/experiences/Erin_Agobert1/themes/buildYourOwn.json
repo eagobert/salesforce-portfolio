@@ -1,6 +1,6 @@
 {
   "activeBrandingSetId" : "ee228413-2adf-473c-8e03-d1b04667f38a",
-  "customCSS" : "@font-face{\n    font-family: 'Fredoka One', cursive;\n    src: url('/portfolio/s/sfsites/c/resource/portfolioFonts/Fredoda_One/FredokaOne-Reqular.ttf') format('ttf');\n}\n@font-face{\n    font-family: 'Varela Round', sans-serif;\n    src: url('/portfolio/s/sfsites/c/resource/portfolioFonts/Varela_Round/VarelaRound-Reqular.ttf') format('ttf');\n}",
+  "customCSS" : "@font-face{\n    font-family: 'FredokaOne';\n    src: url('/sfsites/c/resource/FredokaOne') format('TrueType');\n}\n@font-face{\n    font-family: 'VarelaRound';\n    src: url('/sfsites/c/resource/VarelaRound') format('TrueType');\n}",
   "developerName" : "starter",
   "id" : "1eb9b192-d67c-4516-944e-6099e6436392",
   "label" : "Build Your Own",
@@ -298,6 +298,26 @@
     }, {
       "id" : "c927e700-5e8b-4b8b-87e5-2451987b34f6",
       "regionName" : "column2",
+      "type" : "region"
+    }, {
+      "id" : "d8928895-51a9-48fe-b709-f8c501c54cf4",
+      "regionName" : "row1",
+      "type" : "region"
+    }, {
+      "id" : "cd4bcbfd-18ea-4b15-a4cc-ccfca9419c16",
+      "regionName" : "row2",
+      "type" : "region"
+    }, {
+      "id" : "d5c413b9-7816-4f0c-a47b-c06351b2f0c1",
+      "regionName" : "contentRow1",
+      "type" : "region"
+    }, {
+      "id" : "53643835-132a-4111-aa2d-37d4ba7f676c",
+      "regionName" : "contentRow2",
+      "type" : "region"
+    }, {
+      "id" : "c9366dd5-42c9-425c-9959-82da1927d01c",
+      "regionName" : "contentRow3",
       "type" : "region"
     } ],
     "type" : "view"

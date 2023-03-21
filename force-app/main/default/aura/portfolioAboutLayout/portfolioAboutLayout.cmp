@@ -1,6 +1,9 @@
 <aura:component implements="forceCommunity:themeLayout" access="global">
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentRow1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentRow2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentRow3" type="Aura.Component[]" required="false"/>
     <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
         <lightning:layout class="aboutPg" multipleRows="true">
             <lightning:layoutItem class="navigationRegion" size="12">
@@ -16,11 +19,17 @@
                         	<c:aboutImage></c:aboutImage>
                         </lightning:layout>
                     </lightning:layoutItem>
-                	<lightning:layoutItem class="rightColumnRegion" size="6">
+                	<lightning:layoutItem class="rightColumnRegion" size="6" alignmentBump="left" padding="around-medium">
                     	<lightning:layout multipleRows="true">
-                        	<lightning:layoutItem class="aboutTitle"></lightning:layoutItem>
-                            <lightning:layoutItem class="aboutContent"></lightning:layoutItem>
-                            <lightning:layoutItem class="aboutButton"></lightning:layoutItem>
+                        	<lightning:layoutItem class="aboutHeader" size="12">
+                                <c:aboutHeader></c:aboutHeader>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="aboutContent" size="12">
+                            	<c:aboutContent></c:aboutContent>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="aboutButton" size="12">
+                            	<c:aboutButton></c:aboutButton>
+                            </lightning:layoutItem>
                         </lightning:layout>
                     </lightning:layoutItem>
                 </lightning:layout>
