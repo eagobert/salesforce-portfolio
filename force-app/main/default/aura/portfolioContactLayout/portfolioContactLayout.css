@@ -1,0 +1,37 @@
+.THIS {
+    background-color: t(portfolioBackgroundColor);
+}
+
+.THIS .navigationRegion{
+   	height: 50px;   
+}
+
+.THIS .leftColumnRegion{
+   height: calc(100vh - 100px);
+}
+.THIS .rightColumnRegion{
+   height: calc(100vh - 100px);
+}
+
+.THIS .footerRegion{
+    height: 50px;
+}
+
+/*Contact Form*/
+.THIS .formHeader{
+    font-family: t(fontFamilyHeading);
+    font-size: t(headerFontSize);
+}
+
+.THIS ::placeholder{
+    color: t(placeholderTextColor);
+    font-family: t(fontFamily);
+    font-size: t(placeholderFontSize);
+}
+.THIS .slds-textarea{
+    border-radius: 1rem;
+    min-height: 6.50rem;
+}
+.THIS input{
+    border-radius: 1rem;
+}

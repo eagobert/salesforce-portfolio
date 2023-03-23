@@ -4,7 +4,7 @@
   "configurationTags" : [ ],
   "id" : "9368a75d-90a3-4253-bec2-383d5530ccca",
   "label" : "About",
-  "pageAccess" : "UseParent",
+  "pageAccess" : "Public",
   "routeType" : "custom-about",
   "type" : "route",
   "urlPrefix" : "about"

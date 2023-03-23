@@ -1,0 +1,69 @@
+<aura:component implements="forceCommunity:themeLayout" access="global">
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="leadRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    <force:recordData aura:id="recordLoader"
+                      fields="FirstName, LastName, Email, Phone, Description"
+                      targetFields="{!v.leadRecord}"
+                      targetError="recordLoadError"
+                      />
+    
+    <lightning:layout class="contactPg" multipleRows="true">
+        <lightning:layoutItem class="navigationRegion" size="12">
+            <c:portfolioNavigation></c:portfolioNavigation>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="mainContentRegion" size="12">
+            <lightning:layout>
+                <lightning:layoutItem class="leftColumnRegion" size="6">
+                    <lightning:layoutItem size="10" padding="around-large" alignmentBump="left">
+                        <lightning:layout multipleRows="true" class="contactForm">
+                            <lightning:layoutItem class="formHeader">
+                                <lightning:formattedText value="CONTACT ME"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="formBody">
+                                <lightning:layout multipleRows="true" verticalAlign="center" horizontalAlign="center">
+                                    <lightning:layoutItem size="5" padding="around-small">
+                                        <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="5" padding="around-small">
+                                        <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="5" padding="around-small">
+                                        <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="5" padding="around-small">
+                                        <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="10" padding="around-small">
+                                        <lightning:textarea class="descriptionText" name="Description" type="text" placeholder="Describe your project" value="{!v.leadRecord.Description}" variant="label-hidden" maxlength="32000"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="formButton" alignmentBump="left">
+                                <lightning:button label="SUBMIT" variant="brand" name="formButton"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layoutItem>
+                    <lightning:layoutItem class="rightColumnRegion" size="6">
+                        <lightning:layout multipleRows="true" class="contactInfo">
+                            <lightning:layoutItem class="findMeSection" size="12">
+                                <!-- start find me section -->
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="emailMeSection" size="12">
+                                <!-- start email me section -->
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="meetMeSection" size="12">
+                                <!-- start meet me section -->
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="footerRegion" size="12">
+                {!v.footer}
+            </lightning:layoutItem>
+        </lightning:layout>
+</aura:component>

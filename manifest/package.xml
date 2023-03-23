@@ -15,6 +15,7 @@
         <members>portfolioThemeTokens</members>
         <members>portfolioHomeLayout</members>
         <members>portfolioAboutLayout</members>
+        <members>portfolioContactLayout</members>
         <members>portfolioNavigation</members>
         <members>mainImage</members>
         <members>aboutImage</members>
