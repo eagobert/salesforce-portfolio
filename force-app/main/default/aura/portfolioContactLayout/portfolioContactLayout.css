@@ -34,4 +34,14 @@
 }
 .THIS input{
     border-radius: 1rem;
+    padding-left: 3.75rem; 
 }
+
+.THIS button{
+    padding: t(buttonPadding);
+}
+
+/*.THIS .slds-icon{
+    position: absolute;
+    z-index: 2;
+}*/

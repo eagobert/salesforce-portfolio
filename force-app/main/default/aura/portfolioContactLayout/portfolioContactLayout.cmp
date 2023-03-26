@@ -16,38 +16,50 @@
         </lightning:layoutItem>
         <lightning:layoutItem class="mainContentRegion" size="12">
             <lightning:layout>
-                <lightning:layoutItem class="leftColumnRegion" size="6">
-                    <lightning:layoutItem size="10" padding="around-large" alignmentBump="left">
-                        <lightning:layout multipleRows="true" class="contactForm">
-                            <lightning:layoutItem class="formHeader">
+                <lightning:layoutItem class="leftColumnRegion" size="8">
+                    <lightning:layoutItem size="11" padding="around-large" alignmentBump="left">
+                        <lightning:layout multipleRows="true" class="contactForm"  horizontalAlign="center" verticalAlign="center">
+                            <lightning:layoutItem class="formHeader" padding="around-medium">
                                 <lightning:formattedText value="CONTACT ME"/>
                             </lightning:layoutItem>
                             <lightning:layoutItem class="formBody">
                                 <lightning:layout multipleRows="true" verticalAlign="center" horizontalAlign="center">
-                                    <lightning:layoutItem size="5" padding="around-small">
-                                        <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
+                                    <lightning:layoutItem padding="around-small" size="5">
+                                        <div class="slds-input-has-icon slds-input-has-icon_left">
+                                            <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                            <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
+                                        </div>
                                     </lightning:layoutItem>
-                                    <lightning:layoutItem size="5" padding="around-small">
-                                        <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
+                                    <lightning:layoutItem padding="around-small" size="5">
+                                        <div class="slds-input-has-icon slds-input-has-icon_left">
+                                            <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                            <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
+                                        </div>
                                     </lightning:layoutItem>
-                                    <lightning:layoutItem size="5" padding="around-small">
-                                        <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
+                                    <lightning:layoutItem padding="around-small" size="5">
+                                        <div class="slds-input-has-icon slds-input-has-icon_left">
+                                            <lightning:icon iconName="utility:email" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                            <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
+                                        </div>
                                     </lightning:layoutItem>
-                                    <lightning:layoutItem size="5" padding="around-small">
-                                        <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
+                                    <lightning:layoutItem padding="around-small" size="5">
+                                        <div class="slds-input-has-icon slds-input-has-icon_left">
+                                            <lightning:icon iconName="utility:call" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                            <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
+                                        </div>
                                     </lightning:layoutItem>
                                     <lightning:layoutItem size="10" padding="around-small">
                                         <lightning:textarea class="descriptionText" name="Description" type="text" placeholder="Describe your project" value="{!v.leadRecord.Description}" variant="label-hidden" maxlength="32000"/>
                                     </lightning:layoutItem>
                                 </lightning:layout>
                             </lightning:layoutItem>
-                            <lightning:layoutItem class="formButton" alignmentBump="left">
+                            <lightning:layoutItem class="formButton" size="3" padding="around-small">
                                 <lightning:button label="SUBMIT" variant="brand" name="formButton"/>
                             </lightning:layoutItem>
                         </lightning:layout>
                     </lightning:layoutItem>
                 </lightning:layoutItem>
-                    <lightning:layoutItem class="rightColumnRegion" size="6">
+                    <lightning:layoutItem class="rightColumnRegion" size="4">
                         <lightning:layout multipleRows="true" class="contactInfo">
                             <lightning:layoutItem class="findMeSection" size="12">
                                 <!-- start find me section -->
