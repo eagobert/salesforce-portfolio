@@ -6,6 +6,7 @@
         <name>ContentAsset</name>
     </types>
     <types>
+        <members>FontAwesome</members>
         <members>FredokaOne</members>
         <members>VarelaRound</members>
         <name>StaticResource</name>

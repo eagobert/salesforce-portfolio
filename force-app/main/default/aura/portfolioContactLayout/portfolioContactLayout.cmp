@@ -1,4 +1,5 @@
 <aura:component implements="forceCommunity:themeLayout" access="global">
+    <ltng:require styles="{!$Resource.FontAwesome + '/myFontawesome/css/all.min.css'}"/>
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="header" type="Aura.Component[]" required="false"/>
     <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
@@ -17,7 +18,7 @@
         <lightning:layoutItem class="mainContentRegion" size="12">
             <lightning:layout>
                 <lightning:layoutItem class="leftColumnRegion" size="8">
-                    <lightning:layoutItem size="11" padding="around-large" alignmentBump="left">
+                    <lightning:layoutItem size="9" padding="around-large" alignmentBump="right">
                         <lightning:layout multipleRows="true" class="contactForm"  horizontalAlign="center" verticalAlign="center">
                             <lightning:layoutItem class="formHeader" padding="around-medium">
                                 <lightning:formattedText value="CONTACT ME"/>
@@ -59,23 +60,47 @@
                         </lightning:layout>
                     </lightning:layoutItem>
                 </lightning:layoutItem>
-                    <lightning:layoutItem class="rightColumnRegion" size="4">
-                        <lightning:layout multipleRows="true" class="contactInfo">
-                            <lightning:layoutItem class="findMeSection" size="12">
-                                <!-- start find me section -->
-                            </lightning:layoutItem>
-                            <lightning:layoutItem class="emailMeSection" size="12">
-                                <!-- start email me section -->
-                            </lightning:layoutItem>
-                            <lightning:layoutItem class="meetMeSection" size="12">
-                                <!-- start meet me section -->
-                            </lightning:layoutItem>
-                        </lightning:layout>
+                <lightning:layoutItem class="rightColumnRegion" size="4">
+                    <lightning:layoutItem alignmentBump="right">
+                    <lightning:layout multipleRows="true" class="contactInfo">
+                        <lightning:layoutItem class="findMeSection" size="12">
+                            <!-- start find me section -->
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem size="12">
+                                    <lightning:formattedText value="Find Me:"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem size="12">
+                                    <i class="fa-brands fa-linkedin"/>
+                                <!--lightning:buttonIcon iconName="utility:trailhead" alternativeText="salesforce trailhead icon"/-->
+                                   <!-- <lightning:buttonIcon iconName=""/> -->
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem class="emailMeSection" size="12">
+                            <!-- start email me section -->
+                            <lightning:layout>
+                                <lightning:layoutItem>
+                                    <lightning:formattedText value="Email Me:"/>
+                                </lightning:layoutItem>
+                                <!-- <lightning:buttonIcon iconName=""/> -->
+                            </lightning:layout>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem class="meetMeSection" size="12">
+                            <!-- start meet me section -->
+                            <lightning:layout>
+                                <lightning:layoutItem>
+                                    <lightning:formattedText value="Meet Me:"/>
+                                </lightning:layoutItem>
+                                <!-- <lightning:buttonIcon iconName=""/> -->
+                            </lightning:layout>
+                        </lightning:layoutItem>
+                    </lightning:layout>
                     </lightning:layoutItem>
-                </lightning:layout>
-            </lightning:layoutItem>
-            <lightning:layoutItem class="footerRegion" size="12">
-                {!v.footer}
-            </lightning:layoutItem>
-        </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="footerRegion" size="12">
+            {!v.footer}
+        </lightning:layoutItem>
+    </lightning:layout>
 </aura:component>

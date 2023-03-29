@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'brandIcons';
+    src: url('/sfsites/c/resource/FontAwesome/webfonts/fa-brands-400.ttf') format('TrueType');
+}
+
 .THIS {
     background-color: t(portfolioBackgroundColor);
 }
@@ -9,6 +14,7 @@
 .THIS .leftColumnRegion{
    height: calc(100vh - 100px);
 }
+
 .THIS .rightColumnRegion{
    height: calc(100vh - 100px);
 }
@@ -41,7 +47,14 @@
     padding: t(buttonPadding);
 }
 
-/*.THIS .slds-icon{
-    position: absolute;
-    z-index: 2;
-}*/
+/*Icons*/
+.THIS i.fa-linkedin::before {
+    font-family: 'brandIcons';
+   /* color: t(placeholderTextColor); */
+   /* background-color: white; */
+    font: var(--fa-font-brands);
+    content: f08c;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}

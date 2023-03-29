@@ -1,13 +1,13 @@
 {
   "activeBrandingSetId" : "ee228413-2adf-473c-8e03-d1b04667f38a",
-  "customCSS" : "@font-face{\n    font-family: 'FredokaOne';\n    src: url('/sfsites/c/resource/FredokaOne') format('TrueType');\n}\n@font-face{\n    font-family: 'VarelaRound';\n    src: url('/sfsites/c/resource/VarelaRound') format('TrueType');\n}",
+  "customCSS" : "@font-face{\n    font-family: 'FredokaOne';\n    src: url('/sfsites/c/resource/FredokaOne') format('TrueType');\n}\n@font-face{\n    font-family: 'VarelaRound';\n    src: url('/sfsites/c/resource/VarelaRound') format('TrueType');\n}\n\n@font-face{\n    font-family: 'fontawesomeRegular';\n    src: url('/sfsites/c/resource/myFontawesome/webfonts/fa-regular-400.ttf') format('TrueType');\n}",
   "developerName" : "starter",
   "id" : "1eb9b192-d67c-4516-944e-6099e6436392",
   "label" : "Build Your Own",
   "layouts" : {
     "Inner" : "6676d207-2ea4-480f-b72c-81b9a9cc3bad",
     "Login" : "7007ab2a-7d32-48da-8430-f43d315ee5a3",
-    "OsLtd5MiDIZAwJODfrnu8tYsvk1qnD" : "a7f72db5-2c35-4e59-b2c2-b055b27dbd1e",
+    "NwCjsWvSAgzw31z4gfdVL7KRj5Y2jd" : "7fe16c0c-c3d6-406a-922c-e88cafa2e10a",
     "ServiceNotAvailable" : "0fb79fa4-0346-4970-ba8e-27b9175a2622",
     "bhZpB55dOkvnfVfZACUdEOBKnGscW4" : "c8c3a179-b5d0-4398-9ea9-b9d163dfe6a2",
     "nVCZzpjVPeIxYdq1kZCNP9GGWNb7Eq" : "46a7eb54-2af5-4b73-95b4-db9b4b7ee38e"
@@ -325,7 +325,7 @@
   }, {
     "componentAttributes" : { },
     "componentName" : "c:portfolioContactLayout",
-    "id" : "a7f72db5-2c35-4e59-b2c2-b055b27dbd1e",
+    "id" : "7fe16c0c-c3d6-406a-922c-e88cafa2e10a",
     "label" : "Portfolio Contact",
     "regions" : [ {
       "components" : [ {
@@ -338,11 +338,11 @@
           } ]
         },
         "componentName" : "forceCommunity:globalSearchInput",
-        "id" : "74f63800-4c81-430a-aa70-29395b72ce2b",
+        "id" : "1ace83f3-9e7f-4cbf-acfe-57c7c059467e",
         "renditionMap" : { },
         "type" : "component"
       } ],
-      "id" : "595eae02-2770-4911-8b99-c9fb89f3e10c",
+      "id" : "ecc37718-2a2b-45e8-988c-4d348888499c",
       "regionName" : "search",
       "type" : "region"
     }, {
@@ -365,11 +365,11 @@
           "viewProfileLabel" : "My Profile"
         },
         "componentName" : "selfService:userProfileMenu",
-        "id" : "d2c32282-094d-44b0-afd1-c0ed2e363823",
+        "id" : "02f874a4-a227-4f2c-bab1-0d38b5945858",
         "renditionMap" : { },
         "type" : "component"
       } ],
-      "id" : "3298023f-6c27-4c75-92e2-eb0e6a096fbe",
+      "id" : "08d58ca2-7cc8-4142-bdf6-155405d0fba2",
       "regionName" : "profileMenu",
       "type" : "region"
     }, {
@@ -380,19 +380,19 @@
           "hideHomeText" : false
         },
         "componentName" : "forceCommunity:globalNavigation",
-        "id" : "4b5b2f49-2b3f-4ca1-851b-a6d7fc92ea59",
+        "id" : "9d14e5f6-1faa-4d68-94b2-bb47ee0e8ea9",
         "renditionMap" : { },
         "type" : "component"
       } ],
-      "id" : "7f54fe7e-38c3-42c7-9a2c-89ab6b5e286a",
+      "id" : "60ac33ac-d76b-4a46-ba9a-129bff8bc210",
       "regionName" : "navBar",
       "type" : "region"
     }, {
-      "id" : "71c2f16e-35af-41b6-827a-14401d0e66d5",
+      "id" : "3b3f8c0f-9c90-4124-b5e4-cc38cb873744",
       "regionName" : "header",
       "type" : "region"
     }, {
-      "id" : "ba6be935-133f-4894-b0a3-c289ab02166a",
+      "id" : "4d68cc60-7ca2-4926-a32f-7cbd1b16b810",
       "regionName" : "footer",
       "type" : "region"
     } ],
