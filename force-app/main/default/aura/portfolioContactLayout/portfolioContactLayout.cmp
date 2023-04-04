@@ -16,85 +16,91 @@
             <c:portfolioNavigation></c:portfolioNavigation>
         </lightning:layoutItem>
         <lightning:layoutItem class="mainContentRegion" size="12">
-            <lightning:layout>
-                <lightning:layoutItem class="leftColumnRegion" size="8">
-                    <lightning:layoutItem size="9" padding="around-large" alignmentBump="right">
-                        <lightning:layout multipleRows="true" class="contactForm"  horizontalAlign="center" verticalAlign="center">
-                            <lightning:layoutItem class="formHeader" padding="around-medium">
-                                <lightning:formattedText value="CONTACT ME"/>
-                            </lightning:layoutItem>
-                            <lightning:layoutItem class="formBody">
-                                <lightning:layout multipleRows="true" verticalAlign="center" horizontalAlign="center">
-                                    <lightning:layoutItem padding="around-small" size="5">
-                                        <div class="slds-input-has-icon slds-input-has-icon_left">
-                                            <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                            <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
-                                        </div>
+            <lightning:layout verticalAlign="stretch">
+                <lightning:layoutItem class="leftColumnRegion" padding="around-large" size="7">
+                    <lightning:layout multipleRows="true" verticalAlign="center" horizontalAlign="center">
+                        <lightning:layoutItem class="formHeader" padding="around-medium" size="12">
+                            <lightning:formattedText value="CONTACT ME"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-medium" size="6">
+                            <div class="slds-input-has-icon slds-input-has-icon_left">
+                                <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-medium" size="6">
+                            <div class="slds-input-has-icon slds-input-has-icon_left">
+                                <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-medium" size="6">
+                            <div class="slds-input-has-icon slds-input-has-icon_left">
+                                <lightning:icon iconName="utility:email" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-medium" size="6">
+                            <div class="slds-input-has-icon slds-input-has-icon_left">
+                                <lightning:icon iconName="utility:call" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
+                                <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-medium" size="12">
+                            <lightning:textarea class="descriptionText" name="Description" type="text" placeholder="Describe your project" value="{!v.leadRecord.Description}" variant="label-hidden" maxlength="32000"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem class="formButton" size="3" padding="around-small">
+                            <lightning:button label="SUBMIT" variant="brand" name="formButton"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="rightColumnRegion slds-is-relative" padding="around-large" size="5">
+                    <lightning:layoutItem class="contactInfo slds-is-absolute">
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem class="findMeSection" size="12">
+                                <!-- start find me section -->
+                                <lightning:layout multipleRows="true">
+                                    <lightning:layoutItem size="12" class="slds-p-bottom_x-small">
+                                        <lightning:formattedText class="contentHeader" value="Find Me:"/>
                                     </lightning:layoutItem>
-                                    <lightning:layoutItem padding="around-small" size="5">
-                                        <div class="slds-input-has-icon slds-input-has-icon_left">
-                                            <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                            <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
-                                        </div>
-                                    </lightning:layoutItem>
-                                    <lightning:layoutItem padding="around-small" size="5">
-                                        <div class="slds-input-has-icon slds-input-has-icon_left">
-                                            <lightning:icon iconName="utility:email" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                            <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
-                                        </div>
-                                    </lightning:layoutItem>
-                                    <lightning:layoutItem padding="around-small" size="5">
-                                        <div class="slds-input-has-icon slds-input-has-icon_left">
-                                            <lightning:icon iconName="utility:call" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                            <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
-                                        </div>
-                                    </lightning:layoutItem>
-                                    <lightning:layoutItem size="10" padding="around-small">
-                                        <lightning:textarea class="descriptionText" name="Description" type="text" placeholder="Describe your project" value="{!v.leadRecord.Description}" variant="label-hidden" maxlength="32000"/>
+                                    <lightning:layoutItem size="12">
+                                        <lightning:layout multipleRows="false">
+                                            <lightning:layoutItem class="icons">
+                                                <lightning:button variant="base" class="fa-brands fa-linkedin"/> 
+                                            </lightning:layoutItem>
+                                            <lightning:layoutItem class="icons">
+                                                <lightning:button variant="base" class="fa-brands fa-github"/>
+                                            </lightning:layoutItem>
+                                            <lightning:layoutItem class="icons">
+                                                <lightning:button variant="base" class="fa-brands fa-salesforce"/>
+                                            </lightning:layoutItem>
+                                        </lightning:layout>
                                     </lightning:layoutItem>
                                 </lightning:layout>
                             </lightning:layoutItem>
-                            <lightning:layoutItem class="formButton" size="3" padding="around-small">
-                                <lightning:button label="SUBMIT" variant="brand" name="formButton"/>
+                            <lightning:layoutItem class="emailMeSection slds-p-top_large" size="12">
+                                <!-- start email me section -->
+                                <lightning:layout multipleRows="true">
+                                    <lightning:layoutItem size="12" class="slds-p-bottom_x-small">
+                                        <lightning:formattedText class="contentHeader" value="Email Me:"/>
+                                    </lightning:layoutItem>
+                                      <lightning:layoutItem size="12">
+                                        <lightning:formattedEmail class="contentText" hideIcon="true" label="contact@erinagobert.com" value="contact@erinagobert.com"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="meetMeSection slds-p-top_large" size="12">
+                                <!-- start meet me section -->
+                                <lightning:layout multipleRows="true">
+                                    <lightning:layoutItem size="12" class="slds-p-bottom_x-small">
+                                        <lightning:formattedText class="contentHeader" value="Meet Me:"/>
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem size="12">
+                                        <lightning:formattedUrl class="contentText" label="Schedule a Meeting" value="https://calendar.app.google/M5y4wJ5yYd8H2KUU7"/>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
                             </lightning:layoutItem>
                         </lightning:layout>
-                    </lightning:layoutItem>
-                </lightning:layoutItem>
-                <lightning:layoutItem class="rightColumnRegion" size="4">
-                    <lightning:layoutItem alignmentBump="right">
-                    <lightning:layout multipleRows="true" class="contactInfo">
-                        <lightning:layoutItem class="findMeSection" size="12">
-                            <!-- start find me section -->
-                            <lightning:layout multipleRows="true">
-                                <lightning:layoutItem size="12">
-                                    <lightning:formattedText value="Find Me:"/>
-                                </lightning:layoutItem>
-                                <lightning:layoutItem size="12">
-                                    <i class="fa-brands fa-linkedin"/>
-                                <!--lightning:buttonIcon iconName="utility:trailhead" alternativeText="salesforce trailhead icon"/-->
-                                   <!-- <lightning:buttonIcon iconName=""/> -->
-                                </lightning:layoutItem>
-                            </lightning:layout>
-                        </lightning:layoutItem>
-                        <lightning:layoutItem class="emailMeSection" size="12">
-                            <!-- start email me section -->
-                            <lightning:layout>
-                                <lightning:layoutItem>
-                                    <lightning:formattedText value="Email Me:"/>
-                                </lightning:layoutItem>
-                                <!-- <lightning:buttonIcon iconName=""/> -->
-                            </lightning:layout>
-                        </lightning:layoutItem>
-                        <lightning:layoutItem class="meetMeSection" size="12">
-                            <!-- start meet me section -->
-                            <lightning:layout>
-                                <lightning:layoutItem>
-                                    <lightning:formattedText value="Meet Me:"/>
-                                </lightning:layoutItem>
-                                <!-- <lightning:buttonIcon iconName=""/> -->
-                            </lightning:layout>
-                        </lightning:layoutItem>
-                    </lightning:layout>
                     </lightning:layoutItem>
                 </lightning:layoutItem>
             </lightning:layout>
