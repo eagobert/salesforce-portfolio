@@ -1,0 +1,106 @@
+@font-face{
+    font-family: 'brandIcons';
+    src: url('/sfsites/c/resource/FontAwesome/webfonts/fa-brands-400.ttf') format('TrueType');
+}
+
+.THIS {
+    background-color: t(portfolioBackgroundColor);
+}
+
+.THIS .navigationRegion{
+   	height: 50px;   
+}
+
+.THIS .leftColumnRegion{
+   height: calc(100vh - 100px);
+}
+
+.THIS .rightColumnRegion{
+   height: calc(100vh - 100px);
+}
+
+.THIS .footerRegion{
+    height: 50px;
+}
+
+/*Contact Form*/
+.THIS .formHeader{
+    font-family: t(fontFamilyHeading);
+    font-size: t(headerFontSize);
+    text-align: center;
+}
+
+.THIS ::placeholder{
+    color: t(placeholderTextColor);
+    font-family: t(fontFamily);
+    font-size: t(placeholderFontSize);
+}
+.THIS .slds-textarea{
+    border-radius: 1rem;
+    min-height: 6.50rem;
+}
+.THIS input{
+    border-radius: 1rem;
+    padding-left: 3.75rem; 
+}
+/*Contact Info*/
+
+.THIS .contentHeader{
+    font-family: t(fontFamilyHeading);
+    font-size: 30px;
+}
+
+.THIS .contactInfo{
+    top: 175px;
+}
+
+.THIS .contentText{
+    font-size: t(contentFontSize);
+    text-decoration: underline;
+}
+
+/*Icons*/
+.THIS button[class^="fa"] {
+    font-family: 'brandIcons';
+    font: var(--fa-font-brands);
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.THIS .icons{
+	padding-right: 10px;       
+        }
+       
+.THIS button.fa-linkedin::before {
+    color: #EB7F67;
+    background-color: #7B486D;
+    content: f08c;
+    font-size: 24px;
+}
+
+.THIS button.fa-linkedin{
+    padding: 5px;
+	background-color: #7B486D;
+    color: #EB7F67;      
+}
+
+.THIS button.fa-github::before{
+    content: f09b; 
+    font-size: 24px;
+}
+
+.THIS button.fa-github{
+    padding: 5px;
+    background-color: #7B486D;
+    color: #EB7F67;      
+}
+
+.THIS button.fa-salesforce::before{
+	content: f83b;
+    font-size: 24px;
+}
+.THIS button.fa-salesforce{
+    padding: 5px;
+    background-color: #7B486D;
+    color: #EB7F67;      
+}

@@ -1,0 +1,9 @@
+<aura:tokens extends="forceCommunity:base" access="global">
+    <aura:token name="portfolioBackgroundColor" value="#191970"/>
+    <aura:token name="headerFontSize" value="3.125rem"/>
+    <aura:token name="contentFontSize" value="{!fontSize5}"/>
+    <aura:token name="contentLineHeight" value="1.75"/>
+    <aura:token name="buttonPadding" value="10px 40px"/>
+    <aura:token name="placeholderTextColor" value="#eb7f67"/>
+    <aura:token name="placeholderFontSize" value="{!fontSize3}"/>
+</aura:tokens>

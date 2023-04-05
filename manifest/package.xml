@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>*</members>
-        <name>ApexClass</name>
+     <types>
+        <members>portfolioMainImg2</members>
+        <members>PortfolioBackground2</members>
+        <name>ContentAsset</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexComponent</name>
+        <members>FontAwesome</members>
+        <members>FredokaOne</members>
+        <members>VarelaRound</members>
+        <name>StaticResource</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>defaultTokens</members>
+        <members>portfolioThemeTokens</members>
+        <members>portfolioHomeLayout</members>
+        <members>portfolioAboutLayout</members>
+        <members>portfolioContactLayout</members>
+        <members>portfolioNavigation</members>
+        <members>mainImage</members>
+        <members>aboutImage</members>
+        <members>aboutButton</members>
+        <members>aboutHeader</members>
+        <members>aboutContent</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
+        <members>Erin_Agobert1</members>
+        <name>ExperienceBundle</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
-    </types>
+
     <version>56.0</version>
 </Package>

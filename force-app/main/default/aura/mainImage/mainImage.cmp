@@ -1,0 +1,5 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <lightning:layoutItem flexibility="auto" padding="horizontal-medium" size="11">
+        <img class="mainImg" src="{!$ContentAsset.portfolioMainImg3}" alt="Erin Agobert Salesforce Developer Logo"/>
+    </lightning:layoutItem>
+</aura:component>

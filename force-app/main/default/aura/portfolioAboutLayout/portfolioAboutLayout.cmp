@@ -1,0 +1,38 @@
+<aura:component implements="forceCommunity:themeLayout,lightning:isUrlAddressable" access="global">
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+        <lightning:layout class="aboutPg" multipleRows="true">
+            <lightning:layoutItem class="navigationRegion" size="12">
+                    <c:portfolioNavigation></c:portfolioNavigation>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="mainContentRegion" size="12">
+                <lightning:layout>
+                    <lightning:layoutItem class="leftColumnRegion" size="6">
+                    	<lightning:layout class="aboutImgContainer" 
+                                          verticalAlign="center" 
+                                          horizontalAlign="center"
+                                          pullToBoundary="medium">
+                        	<c:aboutImage></c:aboutImage>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                	<lightning:layoutItem class="rightColumnRegion" size="6" alignmentBump="left" padding="around-medium">
+                    	<lightning:layout multipleRows="true">
+                        	<lightning:layoutItem class="aboutHeader" size="12">
+                                <c:aboutHeader></c:aboutHeader>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="aboutContent" size="12">
+                            	<c:aboutContent></c:aboutContent>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem class="aboutButton" size="12">
+                            	<c:aboutButton></c:aboutButton>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="footerRegion" size="12">
+                {!v.footer}
+            </lightning:layoutItem>
+        </lightning:layout>
+</aura:component>

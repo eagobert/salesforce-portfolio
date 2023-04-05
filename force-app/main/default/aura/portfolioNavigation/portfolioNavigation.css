@@ -1,0 +1,9 @@
+.THIS a {
+    color: t(colorTextDefault);
+}
+
+.THIS.navigationMenu{
+    height: 50px;
+    background-color: #191970;
+    text-transform: t(textTransform);
+}

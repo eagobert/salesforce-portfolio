@@ -1,0 +1,19 @@
+.THIS.backgroundRegion{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.THIS .navigationRegion{
+   	height: 50px;
+}
+
+.THIS .mainContentRegion{
+   height: calc(100vh - 100px);
+}
+.THIS .mainImgContainer{
+   height: calc(100vh - 100px);
+}
+.THIS .footerRegion{
+    height: 50px;
+}
