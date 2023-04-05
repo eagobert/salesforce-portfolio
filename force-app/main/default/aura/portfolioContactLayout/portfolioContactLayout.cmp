@@ -1,8 +1,12 @@
-<aura:component implements="forceCommunity:themeLayout" access="global">
+<aura:component implements="forceCommunity:themeLayout,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
     <ltng:require styles="{!$Resource.FontAwesome + '/myFontawesome/css/all.min.css'}"/>
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="header" type="Aura.Component[]" required="false"/>
     <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+    <!--aura:handler name="change" value="{!v.pageReference}" action="{!c.onPageReferenceChange}"/-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="pageReference" type="Object"/>
     <aura:attribute name="leadRecord" type="Object"/>
     <aura:attribute name="recordLoadError" type="String"/>
     <force:recordData aura:id="recordLoader"
@@ -66,13 +70,13 @@
                                     <lightning:layoutItem size="12">
                                         <lightning:layout multipleRows="false">
                                             <lightning:layoutItem class="icons">
-                                                <lightning:button variant="base" class="fa-brands fa-linkedin"/> 
+                                                <lightning:button name="linkedIn" variant="brand" class="fa-brands fa-linkedin" onclick="{!c.handleClick}"/> 
                                             </lightning:layoutItem>
                                             <lightning:layoutItem class="icons">
-                                                <lightning:button variant="base" class="fa-brands fa-github"/>
+                                                <lightning:button name="github" variant="brand" class="fa-brands fa-github" onclick="{!c.handleClick}"/>
                                             </lightning:layoutItem>
                                             <lightning:layoutItem class="icons">
-                                                <lightning:button variant="base" class="fa-brands fa-salesforce"/>
+                                                <lightning:button name="trailhead" variant="brand" class="fa-brands fa-salesforce" onclick="{!c.handleClick}"/>
                                             </lightning:layoutItem>
                                         </lightning:layout>
                                     </lightning:layoutItem>
