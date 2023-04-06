@@ -5,7 +5,7 @@
         var pageRef = {
             type: 'comm__namedPage',
             attributes: {
-                componentName: 'portfolioContact__c',
+                name: 'portfolioContact__c',
             }
         };
         cmp.set("v.pageReference", pageRef);
@@ -25,7 +25,7 @@
                 pageRef = {
                     type: 'standard__webPage',
                     attributes: {
-                        url: '',
+                        url: 'https://www.linkedin.com/in/eagobert/'
                     }
                 };
                 break;
@@ -34,7 +34,7 @@
                 pageRef = {
                     type: 'standard__webPage',
                     attributes: {
-                        url: 'https://github.com/eagobert',
+                        url: 'https://github.com/eagobert'
                     }
                 };
                 break;
@@ -43,12 +43,14 @@
                 pageRef = {
                     type: 'standard__webPage',
                     attributes: {
-                        url: 'https://trailblazer.me/id/erinagobert',
+                        url: 'https://trailblazer.me/id/erinagobert'
                     }
                 };
                 break;
             default:
                 console.log("No page reference for navigation.");
 		}
+        evt.preventDefault();
+        navService.navigate(pageRef);
 	}
 })
