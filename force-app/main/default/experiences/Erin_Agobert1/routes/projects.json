@@ -4,7 +4,7 @@
   "configurationTags" : [ ],
   "id" : "4ca47dbc-25ba-4833-a0f6-b89ddd7e7785",
   "label" : "Projects",
-  "pageAccess" : "UseParent",
+  "pageAccess" : "Public",
   "routeType" : "custom-projects",
   "type" : "route",
   "urlPrefix" : "projects"
