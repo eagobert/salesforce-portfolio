@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Name_is_Required</fullName>
+    <active>true</active>
+    <description>Last Name is Required</description>
+    <errorConditionFormula>ISBLANK( TRIM( LastName ) )</errorConditionFormula>
+    <errorDisplayField>LastName</errorDisplayField>
+    <errorMessage>Please enter a last name</errorMessage>
+</ValidationRule>

@@ -3,16 +3,20 @@
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="header" type="Aura.Component[]" required="false"/>
     <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
-    <!--aura:handler name="change" value="{!v.pageReference}" action="{!c.onPageReferenceChange}"/-->
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="isRequired" type="Boolean" default="false"/>
+    <aura:attribute name="templateLeadRecord" type="Object"/>
+    <aura:attribute name="leadRecord" type="Object"/>
+    <aura:attribute name="leadError" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <lightning:navigation aura:id="navService"/>
-    <aura:attribute name="pageReference" type="Object"/>
-    <aura:attribute name="leadRecord" type="Object"/>
-    <aura:attribute name="recordLoadError" type="String"/>
-    <force:recordData aura:id="recordLoader"
-                      fields="FirstName, LastName, Email, Phone, Description"
+
+    <force:recordData aura:id="leadCreator"
+                      fields="FirstName, LastName, Company, Email, Phone, Description"
+                      targetRecord="{!v.templateLeadRecord}"
                       targetFields="{!v.leadRecord}"
-                      targetError="recordLoadError"
+                      targetError="{!v.leadError}"
+                      mode="EDIT"
                       />
     
     <lightning:layout class="contactPg" multipleRows="true">
@@ -22,43 +26,52 @@
         <lightning:layoutItem class="mainContentRegion" size="12">
             <lightning:layout verticalAlign="stretch">
                 <lightning:layoutItem class="leftColumnRegion" padding="around-large" size="7">
-                    <lightning:layout multipleRows="true" verticalAlign="center" horizontalAlign="center">
+                    <!-- Begin Contact Form -->
+                    <lightning:layout class="contactForm" multipleRows="true" verticalAlign="center" horizontalAlign="center">
+                        <!-- Display Lightning Data Service errors, if any -->
+                        <aura:if isTrue="{!not(empty(v.leadError))}">
+                            <div class="recordError">
+                                {!v.leadError}</div>
+                        </aura:if>
+                        <lightning:notificationsLibrary aura:id="notifLib"/>
                         <lightning:layoutItem class="formHeader" padding="around-medium" size="12">
                             <lightning:formattedText value="CONTACT ME"/>
                         </lightning:layoutItem>
                         <lightning:layoutItem padding="around-medium" size="6">
                             <div class="slds-input-has-icon slds-input-has-icon_left">
                                 <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                <lightning:input class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden"/>
+                                <lightning:input aura:id="formField" class="fName" name="FirstName" type="text" placeholder="First Name" value="{!v.leadRecord.FirstName}" variant="label-hidden" required="true" messageWhenValueMissing="Please enter a first name."/>
                             </div>
                         </lightning:layoutItem>
                         <lightning:layoutItem padding="around-medium" size="6">
                             <div class="slds-input-has-icon slds-input-has-icon_left">
                                 <lightning:icon iconName="utility:user" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                <lightning:input class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden"/>
+                                <lightning:input aura:id="formField" class="lName" name="LastName" type="text" placeholder="Last Name" value="{!v.leadRecord.LastName}" variant="label-hidden" required="true" messageWhenValueMissing="Please enter a last name."/>
                             </div>
                         </lightning:layoutItem>
                         <lightning:layoutItem padding="around-medium" size="6">
                             <div class="slds-input-has-icon slds-input-has-icon_left">
                                 <lightning:icon iconName="utility:email" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                <lightning:input name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden"/>
+                                <lightning:input aura:id="formField" name="Email" type="email" placeholder="Email" value="{!v.leadRecord.Email}" variant="label-hidden" required="{!v.isRequired}"/>
                             </div>
                         </lightning:layoutItem>
                         <lightning:layoutItem padding="around-medium" size="6">
                             <div class="slds-input-has-icon slds-input-has-icon_left">
                                 <lightning:icon iconName="utility:call" alternativeText="" size="x-small" class="slds-input__icon slds-input__icon_left"/>
-                                <lightning:input name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden"/>
+                                <lightning:input aura:id="formField" name="Phone" type="tel" placeholder="Phone" value="{!v.leadRecord.Phone}" variant="label-hidden" required="{!v.isRequired}"/>
                             </div>
                         </lightning:layoutItem>
                         <lightning:layoutItem padding="around-medium" size="12">
                             <lightning:textarea class="descriptionText" name="Description" type="text" placeholder="Describe your project" value="{!v.leadRecord.Description}" variant="label-hidden" maxlength="32000"/>
                         </lightning:layoutItem>
                         <lightning:layoutItem class="formButton" size="3" padding="around-small">
-                            <lightning:button label="SUBMIT" variant="brand" name="formButton"/>
+                            <lightning:button label="SUBMIT" variant="brand" name="formButton" onclick="{!c.handleSubmitLead}"/>
                         </lightning:layoutItem>
                     </lightning:layout>
+                    <!-- End Contact Form -->
                 </lightning:layoutItem>
                 <lightning:layoutItem class="rightColumnRegion slds-is-relative" padding="around-large" size="5">
+                    <!-- Begin Social Media Info -->
                     <lightning:layoutItem class="contactInfo slds-is-absolute">
                         <lightning:layout multipleRows="true">
                             <lightning:layoutItem class="findMeSection" size="12">
@@ -106,6 +119,7 @@
                             </lightning:layoutItem>
                         </lightning:layout>
                     </lightning:layoutItem>
+                   <!-- End Social Media Info -->
                 </lightning:layoutItem>
             </lightning:layout>
         </lightning:layoutItem>
