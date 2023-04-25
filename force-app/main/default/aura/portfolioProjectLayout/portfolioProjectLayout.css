@@ -1,0 +1,22 @@
+.THIS {
+    background-color: #191970;
+}
+
+.THIS .navigationRegion{
+   	height: 50px;   
+}
+
+.THIS .leftColumnRegion{
+   height: calc(100vh - 100px);
+}
+.THIS .buttonMenu {
+	background-color: #f2f2f2;
+}
+
+.THIS .rightColumnRegion{
+   height: calc(100vh - 100px);
+}
+
+.THIS .footerRegion{
+    height: 50px;
+}
