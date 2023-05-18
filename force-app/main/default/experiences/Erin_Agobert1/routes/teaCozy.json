@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "92ed664a-5e8d-4f4d-ae7c-918efc82b523",
+  "appPageId" : "56421eba-a756-499f-9b4f-ced93948d29a",
+  "configurationTags" : [ ],
+  "id" : "05ef129d-5a4e-4723-af90-3ecf9c24ff7f",
+  "label" : "Tea Cozy",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-tea-cozy",
+  "type" : "route",
+  "urlPrefix" : "tea-cozy"
+}

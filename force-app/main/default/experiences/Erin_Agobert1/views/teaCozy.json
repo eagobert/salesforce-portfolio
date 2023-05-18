@@ -1,0 +1,81 @@
+{
+  "appPageId" : "56421eba-a756-499f-9b4f-ced93948d29a",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "92ed664a-5e8d-4f4d-ae7c-918efc82b523",
+  "label" : "Tea Cozy",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1d00b54c-f1d5-4bd2-b1fa-bc72c800ea89",
+          "columns" : [ {
+            "UUID" : "3dbac5d6-a6fa-45b8-8b56-9048fc739a81",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1d00b54c-f1d5-4bd2-b1fa-bc72c800ea89",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "maxWidth" : 100,
+            "overlayColor" : "rgba(0,0,0,0.4)",
+            "overlayHoverColor" : "",
+            "radius" : 0,
+            "showTitle" : false,
+            "textAlignment" : "center",
+            "textBgColor" : "rgba(0,0,0,0)",
+            "textBgHoverColor" : "rgba(0,0,0,0)",
+            "textColor" : "",
+            "textHoverColor" : "",
+            "textPosition" : "center center",
+            "title" : "Featured Topics"
+          },
+          "componentName" : "forceTopic:featuredTopics",
+          "id" : "990f6a08-aed5-405d-a2e6-32dd98026c88",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3dbac5d6-a6fa-45b8-8b56-9048fc739a81",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d9ff483d-6119-4ebb-9ed1-9892ef649d8d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Tea Cozy"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a8b1528b-e3b1-4eaf-8aa9-dba6b669c516",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d740c319-fd42-456f-94db-fc41b7e6152b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "SEigwRSPbVjWrmRKClE9c7EI2UEBYb",
+  "type" : "view",
+  "viewType" : "custom-tea-cozy"
+}

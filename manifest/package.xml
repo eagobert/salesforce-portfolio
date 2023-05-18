@@ -18,6 +18,8 @@
         <members>portfolioAboutLayout</members>
         <members>portfolioContactLayout</members>
         <members>portfolioNavigation</members>
+        <members>teaCozyLayout</members>
+        <members>teaCozyThemeTokens</members>
         <members>mainImage</members>
         <members>aboutImage</members>
         <members>aboutButton</members>
