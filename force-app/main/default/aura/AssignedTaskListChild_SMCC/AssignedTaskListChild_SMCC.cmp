@@ -1,0 +1,137 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" controller="AssignedTasksManager" access="public">
+    <aura:attribute name="sections" type="List"/>
+    <aura:attribute name="activeSections" type="List"/>
+    <aura:attribute name="url" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:attribute name="outerMap" type="Map"/>
+    <aura:attribute name="key" type="String"/>
+    <lightning:navigation aura:id="navService"/>
+    <!-- Begin display success plan name -->
+    <lightning:layoutItem class="planBox slds-text-align_center slds-m-top_xx-small slds-m-bottom_small" size="12">
+        <lightning:formattedText class="planSection" value="{!v.outerMap.key}"/>
+    </lightning:layoutItem>
+    
+    <lightning:layoutItem size="12">
+        <!-- Begin accordion -->
+        <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
+            <!-- Begin iteration over inner map -->
+            <aura:iteration items="{!v.outerMap.value}" var="innerMap" indexVar="key2">
+                <!-- Begin to display incomplete, complete, and general tasks accordion sections -->
+                <lightning:accordionSection class="taskSection" name="{!innerMap.key}" label="{!innerMap.key}">
+                    <aura:set attribute="actions">
+                        <lightning:badge class="slds-badge_lightest countBadge" label="{!innerMap.value.length}"/>
+                    </aura:set>
+                    <aura:if isTrue="{!innerMap.value.length >= 1}">
+                        <aura:if isTrue="{!$Browser.formFactor == 'DESKTOP' || $Browser.isTablet == true}">
+                            <!--Begin table -->
+                            <lightning:layout class="tableContainer" multipleRows="true">
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_fixed-layout" role="grid" aria-label="{!innerMap.key + ' table'}">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th class="slds-has-button-menu slds-is-resizable" scope="col" aria-label="Subject" style="width: 18.75rem;">
+                                                <lightning:layout horizontalAlign="spread">
+                                                    <lightning:layoutItem class="slds-truncate" title="Subject">
+                                                        Subject
+                                                    </lightning:layoutItem>
+                                                </lightning:layout>
+                                            </th>
+                                            <th class="slds-has-button-menu noResize" scope="col" aria-label="Status" style="width:7rem">
+                                                <lightning:layout horizontalAlign="spread">
+                                                    <lightning:layoutItem class="slds-truncate" title="Status">
+                                                        Status
+                                                    </lightning:layoutItem>
+                                                </lightning:layout>
+                                            </th>
+                                            <th class="slds-has-button-menu noResize" scope="col" aria-label="Due Date" style="width:7rem">
+                                                <lightning:layout horizontalAlign="spread">
+                                                    <lightning:layoutItem class="slds-truncate" title="Due Date">
+                                                        Due Date
+                                                    </lightning:layoutItem>
+                                                </lightning:layout>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!innerMap.value}" var="task">
+                                            <tr class="slds-hint-parent">
+                                                <aura:if isTrue="{!task.Status == 'Completed'}">
+                                                    <th data-label="Subject" class="slds-cell_action-mode" scope="row">        
+                                                        <div class="slds-truncate" title="{!task.Subject}">
+                                                            <a id="{!task.Id}" onclick="{!c.handleClick}">{!task.Subject}</a>
+                                                        </div>
+                                                    </th>
+                                                    <td data-label="Status" class="slds-cell_action-mode" role="gridcell">
+                                                        <div class="slds-truncate" title="{!task.Status}"><lightning:badge class="slds-badge slds-theme_success" label="{!task.Status}"/></div>
+                                                    </td>
+                                                    <td data-label="Due Date" class="slds-cell_action-mode" role="gridcell">
+                                                        <div class="slds-truncate" title="{!task.ActivityDate}">{!task.ActivityDate}</div>
+                                                    </td>
+                                                    <aura:set attribute="else">
+                                                        <th data-label="Subject" class="slds-cell_action-mode" scope="row">         
+                                                            <div class="slds-truncate" title="{!task.Subject}">
+                                                                <a id="{!task.Id}" onclick="{!c.handleClick}">{!task.Subject}</a>
+                                                                <aura:if isTrue="{!task.isOverdue == true}">
+                                                                    <span class="slds-p-left_xx-small">
+                                                                        <lightning:icon class="" iconName="utility:priority" size="x-small" variant="error" alternativeText="Overdue flag" title="Indicates an overdue task"/>
+                                                                    </span>
+                                                                </aura:if>
+                                                            </div>
+                                                        </th>
+                                                        <td data-label="Status" class="slds-cell_action-mode" role="gridcell">
+                                                            <div class="slds-truncate" title="{!task.Status}"><lightning:badge class="cautionBadge" label="{!task.Status}"/></div>
+                                                        </td>
+                                                        <td data-label="Due Date" class="slds-cell_action-mode" role="gridcell">
+                                                            <div class="slds-truncate" title="{!task.ActivityDate}">{!task.ActivityDate}</div>
+                                                        </td>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </lightning:layout>
+                            <aura:set attribute="else">
+                                <lightning:layout multipleRows="true" class="mobileContainer">
+                                    <aura:iteration items="{!innerMap.value}" var="task">
+                                        <lightning:layoutItem size="12" padding="around-medium">
+                                            <lightning:card>
+                                                <aura:set attribute="title">
+                                                    <div class="slds-text-align_left slds-text-heading_small">
+                                                        <lightning:formattedtext value="{!task.Subject}"/>
+                                                    </div>
+                                                </aura:set>
+                                                <aura:set attribute="body">
+                                                    <div class="slds-text-align_center">
+                                                        <lightning:formattedtext class="{!task.isOverdue == 'false' ? '' :'overDue' }" value="{!'Due Date: ' + task.ActivityDate}"/> 
+                                                    </div>
+                                                </aura:set>
+                                                <aura:set attribute="footer">
+                                                    <div>
+                                                        <lightning:button tabindex="0" stretch="true" value="{!task.Id}" variant="brand-outline" label="View" title="View task detail" onclick="{!c.handleViewTask}"/>
+                                                    </div>
+                                                </aura:set>
+                                            </lightning:card>
+                                        </lightning:layoutItem>
+                                    </aura:iteration>
+                                </lightning:layout>
+                            </aura:set>
+                        </aura:if>
+                        <aura:set attribute="else" >
+                            <div class="slds-scoped-notification slds-media slds-media_center slds-theme_info" role="status">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-utility-info" title="info">
+                                        <lightning:icon iconName="utility:info" size="x-small" variant="inverse"/>
+                                        <span class="slds-assistive-text">info</span>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p>No tasks were found.</p>
+                                </div>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </lightning:accordionSection>
+            </aura:iteration>
+        </lightning:accordion>
+    </lightning:layoutItem>
+</aura:component>

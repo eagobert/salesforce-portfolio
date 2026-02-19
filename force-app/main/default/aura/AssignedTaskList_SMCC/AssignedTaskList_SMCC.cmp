@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" controller="AssignedTasksManager" access="public">
+    <aura:attribute name="sections" type="List"/>
+    <aura:attribute name="activeSections" type="List"/>
+    <aura:attribute name="taskPlanMap" type="Map"/>
+    <aura:attribute name="currentDate" type="String"/>
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <lightning:layout multipleRows="true">
+        <!-- Begin Date Container -->
+        <lightning:layoutItem size="12">
+            <lightning:layout class="dateContainer slds-p-top_small slds-p-bottom_large" horizontalAlign="end">
+                <lightning:layoutItem size="3" class="currentDate slds-text-align_center slds-p-around_medium">
+                    <lightning:formattedText value="Today is "/> <lightning:formattedDateTime value="{!v.currentDate}" year="numeric" month="long" day="2-digit" weekday="long" timeZone="UTC"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+       
+        <!-- Begin iteration over outer map -->
+        <aura:iteration items="{!v.taskPlanMap}" var="outerMap" indexVar="key">
+            <c:AssignedTaskListChild_SMCC sections="{!v.sections}" outerMap="{!outerMap}" key="{!key}"/>
+        </aura:iteration>
+    </lightning:layout>
+</aura:component>
