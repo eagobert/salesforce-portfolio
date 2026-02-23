@@ -7,5 +7,6 @@
   "pageAccess" : "UseParent",
   "routeType" : "custom-tea-cozy",
   "type" : "route",
-  "urlPrefix" : "tea-cozy"
+  "urlPrefix" : "tea-cozy",
+  "devName" : "tea-cozy"
 }

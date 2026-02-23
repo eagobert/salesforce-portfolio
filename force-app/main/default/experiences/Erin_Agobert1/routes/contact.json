@@ -7,5 +7,6 @@
   "pageAccess" : "Public",
   "routeType" : "custom-contact",
   "type" : "route",
-  "urlPrefix" : "contact"
+  "urlPrefix" : "contact",
+  "devName" : "contact__c"
 }

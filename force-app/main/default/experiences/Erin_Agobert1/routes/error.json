@@ -7,5 +7,6 @@
   "pageAccess" : "UseParent",
   "routeType" : "error",
   "type" : "route",
-  "urlPrefix" : "error"
+  "urlPrefix" : "error",
+  "devName": "Error"
 }

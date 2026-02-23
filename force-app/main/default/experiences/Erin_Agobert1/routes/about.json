@@ -7,5 +7,6 @@
   "pageAccess" : "Public",
   "routeType" : "custom-about",
   "type" : "route",
-  "urlPrefix" : "about"
+  "urlPrefix" : "about",
+  "devName" : "about__c"
 }

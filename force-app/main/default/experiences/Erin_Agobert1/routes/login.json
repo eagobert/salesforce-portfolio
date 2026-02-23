@@ -6,5 +6,6 @@
   "label" : "Login",
   "routeType" : "login-home",
   "type" : "route",
-  "urlPrefix" : ""
+  "urlPrefix" : "",
+  "devName": "Login"
 }

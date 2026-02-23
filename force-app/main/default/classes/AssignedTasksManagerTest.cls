@@ -1,6 +1,6 @@
 @isTest(SeeAllData=true)
 public class AssignedTasksManagerTest {
-    
+   /* 
     @IsTest static void testGetSingleTask(){
         String taskId = '';
         List<Task> taskList = new List<Task>();
@@ -184,5 +184,5 @@ public class AssignedTasksManagerTest {
                 }
             }
         }
-    }
+    } */
 }

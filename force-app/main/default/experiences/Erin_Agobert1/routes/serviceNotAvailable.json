@@ -6,5 +6,6 @@
   "label" : "Service Not Available",
   "routeType" : "service-not-available",
   "type" : "route",
-  "urlPrefix" : "service-not-available"
+  "urlPrefix" : "service-not-available",
+  "devName" : "Service_Not_Available"
 }

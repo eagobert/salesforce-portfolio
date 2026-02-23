@@ -6,5 +6,6 @@
   "label" : "Register",
   "routeType" : "self-register",
   "type" : "route",
-  "urlPrefix" : "SelfRegister"
+  "urlPrefix" : "SelfRegister",
+  "devName": "Register"
 }

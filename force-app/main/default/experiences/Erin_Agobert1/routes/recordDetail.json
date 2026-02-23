@@ -6,5 +6,6 @@
   "label" : "Record Detail",
   "routeType" : "detail",
   "type" : "route",
-  "urlPrefix" : "detail"
+  "urlPrefix" : "detail",
+  "devName" : "Record_Detail"
 }

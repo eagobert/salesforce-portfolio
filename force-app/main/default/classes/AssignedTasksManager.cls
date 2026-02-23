@@ -36,7 +36,7 @@ public with sharing class AssignedTasksManager{
     * @param {String} The What.Name value of the task to evaluate
     * @returns {Boolean}
     **/
-    @auraEnabled
+ /*   @auraEnabled
     public static Boolean verifyIsGeneralTask(String taskWhatName){
         List<String> strCaseList = new List<String>();
         Boolean isGeneralTask = false;
@@ -56,7 +56,7 @@ public with sharing class AssignedTasksManager{
             } 
         }
         return isGeneralTask; 
-    }
+    } */
     
     /**
     * @desc Sets user id of the logged in user
@@ -73,7 +73,7 @@ public with sharing class AssignedTasksManager{
     * @desc Gets success plan data of the logged in user
     * @returns {List<sfal__SuccessPlan__c>}
     **/
-    @AuraEnabled
+   /* @AuraEnabled
     public static List<sfal__SuccessPlan__c> getSuccessPlans(){
         List<sfal__SuccessPlan__c> studentSP = new List<sfal__SuccessPlan__c>();
         try{
@@ -88,12 +88,12 @@ public with sharing class AssignedTasksManager{
         }
         return studentSP;
     }
-    
+    */
     /**
     * @desc Gets tasks assigned to the logged in user
     * @returns {Map<String,Map<String,List<Task>>>}
     **/
-    @AuraEnabled
+   /* @AuraEnabled
     public static Map<String,Map<String,List<Task>>> getTasks(){
         Map<String,Map<String,List<Task>>> planTaskMap = new Map<String,Map<String,List<Task>>>();
         List<Task> taskList = new List<Task>();
@@ -200,5 +200,5 @@ public with sharing class AssignedTasksManager{
             System.debug(e.getTypeName()+' Error: '+ e.getMessage() +', Line#: ' + e.getLineNumber());
         }
         return planTaskMap;
-    }
+    } */
 }

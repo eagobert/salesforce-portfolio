@@ -7,5 +7,6 @@
   "pageAccess" : "UseParent",
   "routeType" : "relatedlist",
   "type" : "route",
-  "urlPrefix" : "relatedlist"
+  "urlPrefix" : "relatedlist",
+  "devName" : "Related_Record_List"
 }
