@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference,force:hasRecordId" access="public">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="url" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <lightning:navigation aura:id="navService"/>
+    <lightning:layout class="navContainer" verticalAlign="center" horizontalAlign="spread">
+        <lightning:layoutItem padding="around-medium">
+            <strong><lightning:formattedUrl class="navLink" value="{!v.url}" target="_self" label="Back to All Tasks"/></strong>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

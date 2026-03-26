@@ -1,0 +1,16 @@
+.THIS {
+  height: 400px;
+}
+
+.THIS .inputField{
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.THIS #textField-id-01{
+padding-left: 0px;
+  border: none;
+}
+
+.THIS .hide{
+  display: none;
+}

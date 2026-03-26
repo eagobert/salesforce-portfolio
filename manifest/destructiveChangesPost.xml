@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+      <types>
+        <members>portfolioHeadshot</members>
+        <members>portfolioMainImg3</members>
+        <members>PortfolioMainImage1</members>
+        <members>Professional_Cropped</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+         <members>PortfolioBackground3</members>
+        <members>FredokaOne</members>
+        <members>VarelaRound</members>
+         <members>Sacramento</members>
+         <members>Satisfy</members>
+        <name>StaticResource</name>
+    </types>
+    <version>56.0</version>
+</Package>
