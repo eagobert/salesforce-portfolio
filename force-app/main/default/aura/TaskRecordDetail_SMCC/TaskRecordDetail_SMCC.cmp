@@ -1,0 +1,34 @@
+<aura:component implements="lightning:isUrlAddressable,lightning:hasPageReference,force:hasRecordId,forceCommunity:availableForAllPageTypes" controller="AssignedTasksManager" access="public">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isGeneralTask" type="Boolean" default="false"/>
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="taskObj" type="Task" default="{'sobjectType': 'Task'}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <lightning:navigation aura:id="navService"/>
+    <lightning:layout>
+        <lightning:layoutItem size="10" padding="around-small">
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem class="inputField" size="10" padding="around-small">
+                    <lightning:input readonly="true" value="{!v.taskObj.Status}" label="Status"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="inputField" size="10" padding="around-small">
+                    <lightning:input readonly="true" value="{!v.taskObj.Priority}" label="Priority"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="inputField" size="10" padding="around-small">
+                    <lightning:input readonly="true" type="date" value="{!v.taskObj.ActivityDate}" label="Due Date" dateStyle="short"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="inputField" size="10" padding="around-small">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label slds-p-bottom_xx-small" for="textField-id-01">Next Steps</label>
+                        <div class="slds-form-element__control">
+                            <textarea id="textField-id-01" class="slds-textarea" rows="5" readonly="true" maxlength="32000">
+                                {!v.taskObj.Description}
+                            </textarea>
+                        </div>
+                    </div>
+                   
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>	

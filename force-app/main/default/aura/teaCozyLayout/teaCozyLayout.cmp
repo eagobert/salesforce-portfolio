@@ -1,0 +1,120 @@
+<aura:component implements="forceCommunity:themeLayout,lightning:isUrlAddressable" access="global">
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+    
+    <lightning:layout class="projectTeaCozy" multipleRows="true">
+        <!--Begin project header-->
+        <!--header-->
+        <lightning:layoutItem class="navigationRegion" size="12">
+            <div class="logo">
+                <img src="./resources/images/img-tea-cozy-logo.png" alt="TeaCozy Logo"/>
+            </div>
+            <div class="topnav">
+                <a href="#" target="_blank">Mission</a>
+                <a href="#" target="_blank">Featured Tea</a>
+                <a href="#" target="_blank">Locations</a>
+            </div>
+            <!-- /header -->
+        </lightning:layoutItem>
+        <!--End project header-->
+        
+        <!--Begin main content-->
+        <lightning:layoutItem class="mainContentRegion" size="12">
+            <div class="maincontent">
+                
+                <!--Begin top content-->
+                <div class="top">
+                    <div class="mission">
+                        <h2>Our Mission</h2>
+                        <h4>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea</h4>
+                    </div>
+                    
+                </div>
+                <!--End top content-->
+                
+                <!--Begin middle content-->
+                <div class="middle">
+                    
+                    <div class="middlecontent">
+                        <h2>Tea of the Month</h2>
+                        <h4>What's Steeping at The Tea Cozy?</h4>
+                    </div>
+                    
+                    <div class="middleimages">
+                        <div class="image">
+                            <img src="./resources/images/img-berryblitz.jpg" alt="Berry Blitz" width="300" height="200"/>
+                            <h4>Fall Berry Blitz Tea</h4>
+                        </div>
+                        <div class="image">
+                            <img src="./resources/images/img-spiced-rum.jpg" alt="Spiced Rum" width="300" height="200"/>
+                            <h4>Spiced Rum Tea</h4>
+                        </div>
+                        <div class="image">
+                            <img src="./resources/images/img-donut.jpg" alt="Seasonal Donuts" width="300" height="200"/>
+                            <h4>Seasonal Donuts</h4>
+                        </div>
+                        <div class="image">
+                            <img src="./resources/images/img-myrtle-ave.jpg" alt="Myrtle Ave" width="300" height="200"/>
+                            <h4>Myrtle Ave Tea</h4>
+                        </div>
+                        <div class="image">
+                            <img src="./resources/images/img-bedford-bizarre.jpg" alt="Bedford Bizarre" width="300" height="200"/>
+                            <h4>Bedford Bizarre Tea</h4>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--End middle content-->
+                
+                <!--Begin bottom content-->
+                <div class="bottom">
+                    
+                    <div class="bottomcontent">
+                        <h2>Locations</h2>
+                    </div>
+                    
+                    <div class="bottomboxes">
+                        <div class="box">
+                            <h3>Downtown</h3>
+                            <p>384 West 4th St</p>
+                            <p>Suite 108</p>
+                            <p>Portland, Maine</p>
+                        </div>
+                        <div class="box">
+                            <h3>East Bayside</h3>
+                            <p>3433 Phisherman's Avenue</p>
+                            <p>(Northwest Corner)</p>
+                            <p>Portland, Maine</p>
+                        </div>
+                        <div class="box">
+                            <h3>Oakdale</h3>
+                            <p>515 Crescent Avenue</p>
+                            <p>Second Floor</p>
+                            <p>Portland, Maine</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--End bottom content-->
+                
+            </div>
+        </lightning:layoutItem>
+        <!--End main content-->
+        
+        <!--Begin project footer-->
+        <lightning:layoutItem class="footerRegion" size="12">
+        <footer>
+            <div class="footertop">
+                <h2>The Tea Cozy</h2>
+                <h5>contact@theteacozy.com</h5>
+                <h5>917-555-8904</h5>
+            </div>
+            <div class="footerbottom">
+                <h5>copyright The Tea Cozy 2017</h5>
+            </div>
+        </footer>
+        </lightning:layoutItem>
+        <!--End project footer-->
+    </lightning:layout>
+</aura:component>

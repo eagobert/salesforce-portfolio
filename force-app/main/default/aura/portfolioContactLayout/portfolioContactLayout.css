@@ -2,6 +2,10 @@
     font-family: 'brandIcons';
     src: url('/sfsites/c/resource/FontAwesome/webfonts/fa-brands-400.ttf') format('TrueType');
 }
+@font-face{
+    font-family: 'regularIcons';
+    src: url('/sfsites/c/resource/FontAwesome/webfonts/fa-regular-400.ttf') format('TrueType');
+}
 
 .THIS {
     background-color: t(portfolioBackgroundColor);
@@ -35,6 +39,22 @@
     font-family: t(fontFamily);
     font-size: t(placeholderFontSize);
 }
+
+.THIS [class^="fa-regular"] {
+    font-family: 'regularIcons';
+    font: var(--fa-font-regular);
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.THIS .fa-building::before {
+    content: f1ad;
+    font-size: 24px;
+}
+        
+.THIS .fa-building::before {
+    color: #7B486D;
+}        
 .THIS .slds-textarea{
     border-radius: 1rem;
     min-height: 6.50rem;
@@ -60,7 +80,7 @@
 }
 
 /*Icons*/
-.THIS button[class^="fa"] {
+.THIS button[class^="fa-brands"] {
     font-family: 'brandIcons';
     font: var(--fa-font-brands);
     display: inline-block;
@@ -72,8 +92,6 @@
         }
        
 .THIS button.fa-linkedin::before {
-    color: #EB7F67;
-    background-color: #7B486D;
     content: f08c;
     font-size: 24px;
 }

@@ -3,5 +3,11 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/.sfdx": true
-  }
+  },
+  "xml.preferences.showSchemaDocumentationType": "none",
+  "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home",
+  "salesforcedx-vscode-apex.java.memory": null,
+  "xml.java.home": "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home",
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "salesforcedx-vscode-apex-testing.retrieve-test-code-coverage": true
 }

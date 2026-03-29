@@ -1,0 +1,3 @@
+<aura:tokens extends="forceCommunity:base" access="global">
+	
+</aura:tokens>

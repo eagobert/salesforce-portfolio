@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_is_required</fullName>
+    <active>true</active>
+    <description>Phone or email is required</description>
+    <errorConditionFormula>ISBLANK(TRIM(Email)) &amp;&amp;  ISBLANK(TRIM(Phone))</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Phone or Email is required</errorMessage>
+</ValidationRule>

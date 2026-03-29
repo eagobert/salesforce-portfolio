@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="San Mateo Community College" ref="exampleComponentName" label="Label">
+		Community college client wanted to display a sample task list for students within their Experience Cloud student community.  The component would display student complete, incomplete tasks and whether the tasks were overdue or not.
+		
+		The component is built using Lightning Aura Component, JavaScript, CSS, HTML, Salesforce Lightning Design System (SLDS), and base Salesforce Lightning Components.  The client had installed Salesforce Education Cloud.
+
+		This is an example of the component built for my client imagined as a directory of contacts assigned to accounts and display their assigned tasks.
+	</aura:example>
+</aura:documentation>

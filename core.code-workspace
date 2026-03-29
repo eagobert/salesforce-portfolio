@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "/Users/eagobert/workspace/salesforce-portfolio"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "/Users/eagobert/workspace/salesforce-portfolio"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "/Users/eagobert/workspace/salesforce-portfolio/.eslintrc.json"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@font-face{
+  font-family: 'OpenSansBold';
+  src: url('/sfsites/c/resource/OpenSansBold/OpenSans-Bold.ttf') format('TrueType');
+}
+
+.THIS {
+  height: auto;
+  font-family: 'OpenSansBold', sans-serif;
+}
+
+/*Table Styles*/
+.THIS ul[role="menu"]{
+  background-color: white;
+}
+
+.THIS th{ 
+  resize: horizontal; 
+  overflow: hidden;
+}
+
+.THIS .noResize{
+  resize: none;
+}
+
+/*Date Styles*/
+.THIS .currentDate{
+  border-radius: 10px;
+  border: 1px solid #012147;
+  color: #012147;
+}
+
+/*Accordion Header Styles*/
+.THIS .planBox{
+  background-color: #e6e9ec;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+/*Accordion Section Styles*/
+.THIS .planBox >.planSection{
+  font-family: 'OpenSansBold', sans-serif;
+  font-size: 0.9169rem;
+  color: #012147;
+}
+.THIS .taskSection:last-child {
+  padding-bottom: 10px;
+}
+
+.THIS .slds-accordion__summary{
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 12px;
+}
+
+.THIS .slds-accordion__summary-action-icon{
+  fill: #012147;
+}
+
+.THIS .slds-accordion__summary-content{
+  color: #012147;
+  font-family: 'OpenSansBold', sans-serif;
+  font-weight: bold;
+  font-size: 0.8331rem;
+}
+.THIS .slds-accordion__list-item{
+  border: none;
+}
+.THIS .hideFlag{
+  display: none;
+}
+.THIS .overDue{
+  color: red;
+}
+
+.THIS .countBadge{
+  position: absolute;
+  left: 155px;
+  padding-left: 12px;
+  width: 33px;
+}
+
+.THIS .cautionBadge{
+  background-color: t(paletteYellow80);
+}
